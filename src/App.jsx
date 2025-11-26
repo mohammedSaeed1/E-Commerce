@@ -1,6 +1,6 @@
 import Home from "./components/Home/Home";
 import Layout from "./components/Layout/Layout";
-import {createBrowserRouter, RouterProvider} from "react-router-dom";
+import {createBrowserRouter,RouterProvider} from "react-router-dom";
 import Register from './components/Register/Register';
 import Login from './components/Login/Login';
 import Brands from './components/Brands/Brands';
@@ -29,7 +29,7 @@ import Password from "./components/Password/Password";
 
 const query = new QueryClient();
 
- const router =  createBrowserRouter([{
+ const router = createBrowserRouter([{
    path:'', element:<Layout/> , children:[
    {index:true , element:<ProtectedRoute><Home/></ProtectedRoute>},
    {path:'brands', element:<ProtectedRoute><Brands/></ProtectedRoute>}, 
@@ -62,7 +62,7 @@ export default function App(){
         <CartContextProvider>
           <ProfileContextProvider>
             <WishlistContextProvider>      
-     <RouterProvider router={router} /> 
+     <RouterProvider router={router}/> 
        <Toaster/>
             </WishlistContextProvider>
           </ProfileContextProvider>
