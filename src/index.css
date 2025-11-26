@@ -1,0 +1,102 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.active {
+  color: white !important;
+  background-color: #16a34a;
+  padding: 6px 14px;
+  border-radius: 20px;
+  font-weight: 600;
+  transition: 0.25s;
+}
+
+.row{
+    @apply flex flex-wrap py-6 px-20 ;
+}
+.btn{
+    @apply py-2.5 px-6 bg-green-600 text-slate-100 rounded-xl; 
+}
+
+.description {
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  transition: all 0.3s ease;
+  font-weight: bold;
+}
+
+.description.expanded {
+  -webkit-line-clamp: unset;
+  overflow: visible;
+}
+
+@media (max-width: 770px){
+        .active{
+            color: white;
+            border-bottom: 3px solid white
+        }
+}
+
+.container-input {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 8px;
+  width: 70%;
+  max-width: 30%;
+  margin: auto;
+}
+
+.character {
+  width: 35px;
+  height: 45px;
+  font-size: 20px;
+  text-align: center;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+@media (max-width: 600px) {
+  .character {
+    width: 12vw; 
+    height: 12vw;
+    font-size: 5vw;
+  }
+
+  .container-input {
+    justify-content: center;
+  max-width: 80%;
+    gap: 4px;
+  }
+}
+
+.custom-pagination .swiper-pagination-bullet {
+  width: 10px;
+  height: 10px;
+  background-color: #22c55e; 
+  border-radius: 50%;
+  opacity: 1;
+}
+
+/* النقطة الفعالة */
+.custom-pagination .swiper-pagination-bullet-active {
+  background-color: #16a34a;
+  transform: scale(1.2);
+  transition: all 0.3s;
+}
+
+/* dark mode */
+@media (prefers-color-scheme: dark) {
+  .custom-pagination .swiper-pagination-bullet {
+    background-color: #4ade80;
+  }
+  .custom-pagination .swiper-pagination-bullet-active {
+    background-color: #22c55e;
+  }
+}
+
+
+
+
+
