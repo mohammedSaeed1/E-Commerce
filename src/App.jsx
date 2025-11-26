@@ -26,7 +26,7 @@ import VerificationCode from "./components/VerificationCode/VerificationCode";
 import ResetPassword from "./components/ResetPassword/ResetPassword";
 import PersonalInformation from "./components/PersonalInformation/PersonalInformation";
 import Password from "./components/Password/Password";
-
+import { HelmetProvider } from "react-helmet-async";
 const query = new QueryClient();
 
  const router = createBrowserRouter([{
@@ -62,7 +62,9 @@ export default function App(){
         <CartContextProvider>
           <ProfileContextProvider>
             <WishlistContextProvider>      
+            <HelmetProvider>
      <RouterProvider router={router}/> 
+            </HelmetProvider>
        <Toaster/>
             </WishlistContextProvider>
           </ProfileContextProvider>

@@ -1,7 +1,7 @@
 import MainSlider from '../MainSlider/MainSlider';
 import CategoriesSlider from '../CategoriesSlider/CategoriesSlider';
 import RecentProducts from './../RecentProducts/RecentProducts';
-import { Helmet } from 'react-helmet';
+import { Helmet } from "react-helmet-async";
 export default function Home(){
     
 return (

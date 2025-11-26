@@ -4,7 +4,7 @@ import { useContext, useState } from "react";
 import { userContext } from "../../Context/UserContext";
 import * as Yup from "yup";
 import toast from "react-hot-toast";
-import { Helmet } from "react-helmet";
+import { Helmet } from "react-helmet-async";
 
 export default function PersonalInformation() {
   const { userToken, userName, userEmail } = useContext(userContext);

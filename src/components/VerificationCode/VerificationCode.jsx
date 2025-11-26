@@ -2,7 +2,7 @@ import axios from "axios";
 import VerificationInput from "react-verification-input";
 import toast from "react-hot-toast";
 import { useNavigate } from "react-router-dom";
-import { Helmet } from "react-helmet";
+import { Helmet } from "react-helmet-async";
 
 
 export default function VerificationCode() {

@@ -4,7 +4,7 @@ import { useState } from "react";
 import toast from "react-hot-toast";
 import {useNavigate } from "react-router-dom";
 import * as Yup from "yup";
-import { Helmet } from "react-helmet";
+import { Helmet } from "react-helmet-async";
 
 
 export default function RecoverEmail() {

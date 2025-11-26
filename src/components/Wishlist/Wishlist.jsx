@@ -5,7 +5,7 @@ import useAddProducts from "../../Hooks/useAddProducts";
 import { Link } from "react-router-dom";
 import NoProductsFound from "../NoProductsFound/NoProductsFound";
 import useRemoveFromWishlist from "../../Hooks/useRemoveFromWishlist";
-import { Helmet } from "react-helmet";
+import { Helmet } from "react-helmet-async";
 
 
 export default function Wishlist(){

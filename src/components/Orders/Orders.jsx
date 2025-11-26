@@ -2,7 +2,7 @@ import axios from "axios";
 import { useEffect, useState } from "react";
 import { jwtDecode } from "jwt-decode";
 import Spinner from "./../Spinner/Spinner";
-import { Helmet } from "react-helmet";
+import { Helmet } from "react-helmet-async";
 
 
 export default function Orders() {

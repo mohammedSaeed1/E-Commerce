@@ -3,7 +3,7 @@ import useProducts from "../../Hooks/useProducts"
 import Spinner from "../Spinner/Spinner";
 import useAddProducts from "../../Hooks/useAddProducts";
 import { useEffect, useState } from "react";
-import { Helmet } from "react-helmet";
+import { Helmet } from "react-helmet-async";
 
 export default function Products(){
   

@@ -3,7 +3,7 @@ import { CartContext } from "../../Context/CartContext";
 import { Link } from "react-router-dom";
 import Spinner from "../Spinner/Spinner";
 import CartEmpty from "../CartEmpty/CartEmpty";
-import { Helmet } from "react-helmet";
+import { Helmet } from "react-helmet-async";
 
 export default function Cart() {
   const [isLoading, setIsLoading] = useState(true);

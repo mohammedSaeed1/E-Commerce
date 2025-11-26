@@ -5,7 +5,7 @@ import { userContext } from "../../Context/UserContext";
 import * as Yup from 'yup'
 import toast from "react-hot-toast";
 import { useNavigate } from "react-router-dom";
-import { Helmet } from "react-helmet";
+import { Helmet } from "react-helmet-async";
 
 export default function Password(){
     

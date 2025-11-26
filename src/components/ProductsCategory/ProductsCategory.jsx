@@ -3,7 +3,7 @@ import useProducts from "../../Hooks/useProducts";
 import { Link, useParams } from "react-router-dom";
 import Spinner from "../Spinner/Spinner";
 import useAddProducts from './../../Hooks/useAddProducts';
-import { Helmet } from "react-helmet";
+import { Helmet } from "react-helmet-async";
 
 export default function ProductsCategory(){
   

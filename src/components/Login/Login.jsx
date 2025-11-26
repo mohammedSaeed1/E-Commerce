@@ -6,7 +6,7 @@ import { Link, useNavigate } from "react-router-dom";
 import { userContext } from "../../Context/UserContext";
 import { EyeIcon, EyeSlashIcon } from "@heroicons/react/24/outline";
 import toast from "react-hot-toast";
-import { Helmet } from "react-helmet";
+import { Helmet } from "react-helmet-async";
 
 
 export default function Login(){

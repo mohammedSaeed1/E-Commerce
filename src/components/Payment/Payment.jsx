@@ -2,7 +2,7 @@ import { useFormik } from "formik";
 import { useContext } from "react";
 import { CartContext } from "../../Context/CartContext";
 import toast from "react-hot-toast";
-import { Helmet } from "react-helmet";
+import { Helmet } from "react-helmet-async";
 import * as Yup from "yup";
 
 export default function Payment() {
