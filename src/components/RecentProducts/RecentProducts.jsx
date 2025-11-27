@@ -4,8 +4,8 @@ import useProducts from "../../Hooks/useProducts.jsx";
 import useAddProducts from "../../Hooks/useAddProducts.jsx";
 import { useContext, useEffect, useState } from "react";
 import { WishlistContext } from "../../Context/WishlistContext.jsx";
-import toast from "react-hot-toast";
 import useRemoveFromWishlist from "../../Hooks/useRemoveFromWishlist.jsx";
+import useAddToWishlist from "../../Hooks/useAddToWishlist.jsx";
 
 export default function RecentProducts() {
   
@@ -14,12 +14,8 @@ export default function RecentProducts() {
   const { getAllProducts } = useProducts();
   const { addProduct } = useAddProducts();
   const { removeFromWishlist } = useRemoveFromWishlist();
-  const {
-    addProductToWishlist,
-    setUserWishlistProductsById,
-    userWishlistProductsById,
-    setUserWishlistCount,
-  } = useContext(WishlistContext);
+  const { addToWishlist } = useAddToWishlist();
+  const {userWishlistProductsById} = useContext(WishlistContext);
 
   useEffect(() => {
     getProducts();
@@ -30,22 +26,7 @@ export default function RecentProducts() {
     setProducts(data?.data);
     setIsLoading(false);
   }
-  async function addToWishlist(productId) {
-    const response = await addProductToWishlist(productId);
-    if (response?.data?.status === "success") {
-      setUserWishlistProductsById(response.data.data);
-      setUserWishlistCount(response.data.data.length);
-      toast.success(response.data.message, {
-        duration: 1000,
-        position: "bottom-left",
-      });
-    } else {
-      toast.error(response.response.data.message, {
-        duration: 1000,
-        position: "bottom-left",
-      });
-    }
-  }
+ 
 
   return (
     <>

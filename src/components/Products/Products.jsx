@@ -2,8 +2,12 @@ import { Link } from "react-router-dom";
 import useProducts from "../../Hooks/useProducts"
 import Spinner from "../Spinner/Spinner";
 import useAddProducts from "../../Hooks/useAddProducts";
-import { useEffect, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import { Helmet } from "react-helmet-async";
+import useRemoveFromWishlist from "../../Hooks/useRemoveFromWishlist";
+import useAddToWishlist from "../../Hooks/useAddToWishlist";
+import { WishlistContext } from "../../Context/WishlistContext";
+
 
 export default function Products(){
   
@@ -14,6 +18,11 @@ export default function Products(){
   const [numberOfPages, setNumberOfPages] = useState(1);
   const {getAllProducts} = useProducts();    
   const {addProduct} = useAddProducts();
+  const { removeFromWishlist } = useRemoveFromWishlist();
+  const { addToWishlist } = useAddToWishlist();
+  const {userWishlistProductsById} = useContext(WishlistContext);
+  
+   
 
   useEffect(() => {
     getProducts(page);
@@ -46,7 +55,6 @@ return (
         <Spinner />
       ) : (
         <section>
-
           <div className="mx-auto text-center">
             <input 
               onKeyUp={(e) => searchProduct(e.target.value)}
@@ -60,7 +68,21 @@ return (
 
           <div className="row">
             {filteredProducts?.map((product) => (
-              <div key={product.id} className=" w-full md:w-1/2 md:px-5 lg:w-1/4 xl:w-1/5 p-4 group text-center">
+              <div key={product.id} className=" w-full md:w-1/2 md:px-5 lg:w-1/4 xl:w-1/5 p-4 group text-center relative">
+           
+                {userWishlistProductsById.includes(product.id) ? (
+                  <i
+                    onClick={() => removeFromWishlist(product.id)}
+                    className="fa-solid fa-heart text-red-600 absolute top-4 right-4 text-xl rounded-md cursor-pointer"
+                  ></i>
+                ) : (
+                  <i
+                    onClick={() => addToWishlist(product.id)}
+                    className="fa-regular fa-heart text-black absolute top-4 right-4 text-xl rounded-md cursor-pointer"
+                  ></i>
+                )}
+           
+           
                 <Link to={`/productdetails/${product?.id}/${product?.category?.name}`}>
                   <div className="product">
                     <img className="w-full" src={product?.imageCover} alt={product?.title} />

@@ -64,7 +64,7 @@ return (
     </Helmet>
    <section className="py-10 px-5 sm:px-0">
           <form className="max-w-lg mx-auto py-5" onSubmit={formik.handleSubmit} >        
-       <h2 className="text-2xl font-bold text-green-600 pt-1">Updata your Password</h2>
+       <h2 className="text-2xl font-bold text-green-600 pt-1">Update your Password</h2>
        
   <div className="relative z-0 w-full mb-5 group mt-3">
       <input type="password"  value={formik.values.name} onChange={formik.handleChange} onBlur={formik.handleBlur} name="currentPassword" id="currentPassword" className="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-green-600 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-green-500 focus:outline-none focus:ring-0 focus:border-green-600 peer" placeholder="Your Password" />

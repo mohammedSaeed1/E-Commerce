@@ -74,8 +74,6 @@ export default function ProductDetails() {
                       </SwiperSlide>
                     ))}
                   </Swiper>
-
-                  {/* Pagination Dots */}
                   <div className="flex justify-center mt-3 gap-2">
                     {product.images.map((_, index) => (
                       <span
@@ -114,7 +112,7 @@ export default function ProductDetails() {
               </p>
               <button
                 onClick={() => setExpanded(!expanded)}
-                className="text-green-600 font-semibold mt-1"
+                className="text-gray-400 font-semibold mt-1"
               >
                 {expanded ? "Show Less" : "Read More"}
               </button>
