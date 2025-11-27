@@ -2,7 +2,7 @@
   "name": "ecommerceproject",
   "private": true,
   "version": "0.0.0",
-  "homepage": "https://mohammedsaeed1.github.io/E-Commerce",
+  "homepage": "https://mohammedsaeed1.github.io/e-Commerce",
   "type": "module",
   "scripts": {
     "dev": "vite",
