@@ -7,10 +7,12 @@ export default function Layout(){
   
 return (
     <>
+    <section className="dark:bg-[#1B1B1F]">
       <Navbar/>
-      <section className="container sm:w-[90%] mx-auto pt-8 dark:bg-[#1B1B1F]">
+      <section className="container sm:w-[90%] mx-auto pt-8 ">
       <Outlet/>
       </section>
+    </section>
      <Footer/>
     
     </>
