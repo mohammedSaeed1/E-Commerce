@@ -6,6 +6,10 @@ import { Helmet } from "react-helmet-async";
 import * as Yup from "yup";
 
 export default function Payment() {
+
+
+   
+
   const { checkOut, cartId, createCashOrder } = useContext(CartContext);
   const { numCartItems, totalCartPrice, setNumCartItems, setTotalCartPrice } =
     useContext(CartContext);
@@ -45,7 +49,7 @@ export default function Payment() {
       if (paymentMethod === `cash`) {
         handleCashOrder(cartId, { details, phone, city });
       } else {
-        handleCheckout(cartId, `http://localhost:5173`, {
+        handleCheckout(cartId, `https://mohamedsaeed-nine.vercel.app/`, {
           details,
           phone,
           city,
