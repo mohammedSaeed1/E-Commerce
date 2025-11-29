@@ -72,7 +72,7 @@ export default function PersonalInformation() {
     <Helmet>
       <title>Personal Information</title>
     </Helmet>
-      <section className="py-10 px-5 sm:px-0">
+      <section className="py-10 px-5 md:py-20 sm:px-0">
         <form className="max-w-lg mx-auto py-5" onSubmit={formik.handleSubmit}>
           <h2 className="text-2xl font-bold text-green-600 pt-1">
             Your Personal Information

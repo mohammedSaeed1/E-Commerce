@@ -31,7 +31,7 @@ return (
    <title>Categories</title>
      </Helmet>
      
-{isLoading ? <Spinner/> :<section className=" py-8 antialiased md:py-16 mt-5">
+{isLoading ? <Spinner/> :<section className=" py-8 antialiased md:py-7 md:pb-32 mt-5">
   <div className="mx-auto max-w-screen-xl px-4 2xl:px-0">
     <div className="mb-4 flex items-center justify-between gap-4 md:mb-8">
       <h2 className="md:text-3xl text-2xl font-serif font-semibold text-green-600 dark:text-white border-b-4 border-green-600 inline">Shop by Category</h2>

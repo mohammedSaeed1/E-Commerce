@@ -49,7 +49,7 @@ export default function ProductDetails() {
       {isLoading ? (
         <Spinner />
       ) : (
-        <section className="dark:bg-gray-900 py-8">
+        <section className="py-8">
           <div className="row flex flex-wrap justify-center items-start gap-8">
             <div className="md:w-1/4 w-full px-4">
               {product?.images?.length > 0 ? (

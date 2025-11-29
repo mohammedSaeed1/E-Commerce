@@ -64,7 +64,7 @@ export default function Payment() {
       <Helmet>
         <title>Payment</title>
       </Helmet>
-      <section className="bg-white py-8 antialiased dark:bg-gray-900 md:py-16">
+      <section className=" py-8 antialiased  md:py-16">
         <form
           onSubmit={formik.handleSubmit}
           className="mx-auto max-w-screen-xl px-4 2xl:px-0"

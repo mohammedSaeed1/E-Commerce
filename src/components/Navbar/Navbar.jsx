@@ -72,8 +72,11 @@ export default function Navbar() {
 
       {/* Logo + Mobile Theme + Cart/Wishlist */}
       <div className="flex justify-between items-center md:flex-none w-full md:w-auto">
+        
         <div className="logo">
+          <Link to={`/`}>
           {theme === "dark" ? <img src={darkLogo} alt="FreshCart" /> : <img src={lightLogo} alt="FreshCart" />}
+          </Link>
         </div>
 
         <div className="flex items-center gap-7 md:hidden">
@@ -87,14 +90,14 @@ export default function Navbar() {
           </div>
 
           {userToken && (
-            <div className="w-[100px] flex gap-2">
-              <Link to="/cart" className="relative">
+            <div className="w-[100px] flex gap-10 ">
+              <Link to="/cart" className="relative pl-5 ">
                 <i className="fa-solid fa-cart-shopping text-xl text-black dark:text-white"></i>
                 {numCartItems > 0 && (
                   <span className="absolute -top-2 -right-2 bg-green-600 text-white text-xs font-semibold w-5 h-5 flex items-center justify-center rounded-full shadow-md">{numCartItems}</span>
                 )}
               </Link>
-              <Link to="/wishlist" className="relative">
+              <Link to="/wishlist" className="relative -ml-7">
                 <i className="far fa-heart text-xl text-black dark:text-white"></i>
                 {userWishlistCount > 0 && (
                   <span className="absolute -top-2 -right-2 bg-[#FF3366] text-white text-xs font-semibold w-5 h-5 flex items-center justify-center rounded-full shadow-md">{userWishlistCount}</span>
@@ -112,9 +115,9 @@ export default function Navbar() {
       </div>
 
       {/* Menu Items */}
-      <ul className={`md:flex md:items-center md:gap-x-4 ${menuOpen && !profileOpen ? "flex flex-col mt-2 items-end px-2" : "hidden md:flex"}`}>
+      <ul className={`md:flex md:items-center md:gap-x-4 ${menuOpen && !profileOpen ? "flex flex-col mt-2 items-end px-2 " : "hidden md:flex"}`}>
         {userToken && menuItems.map(item => (
-          <li key={item.name} className="py-1.5 md:py-0.5 text-gray-900 dark:text-white">
+          <li key={item.name} className="py-1.5 md:py-0.5 text-gray-900 dark:text-white  ">
             <NavLink onClick={() => setMenuOpen(false)} to={item.to}>
               {item.name} <i className={`fa-solid ms-1 ${item.icon}`}></i>
             </NavLink>
@@ -159,23 +162,9 @@ export default function Navbar() {
       )}
 
       {/* Desktop Right Icons */}
-      {userToken && (
-        <div className="hidden md:flex items-center justify-around gap-12 w-[400px]">
-          <Link to="/cart" className="relative">
-            <i className="fa-solid fa-cart-shopping text-xl text-black dark:text-white"></i>
-            {numCartItems > 0 && (
-              <span className="absolute -top-2 -right-2 bg-green-600 text-white text-xs font-semibold w-5 h-5 flex items-center justify-center rounded-full shadow-md">{numCartItems}</span>
-            )}
-          </Link>
-          <Link to="/wishlist" className="relative -ml-20">
-            <i className="far fa-heart text-xl text-black dark:text-white"></i>
-            {userWishlistCount > 0 && (
-              <span className="absolute -top-2 -right-2 bg-[#FF3366] text-white text-xs font-semibold w-5 h-5 flex items-center justify-center rounded-full shadow-md">{userWishlistCount}</span>
-            )}
-          </Link>
 
-          {/* Theme toggle */}
-          <div onClick={toggleTheme} className="cursor-pointer transition-transform duration-300 sm:hover:scale-110">
+        {/* Theme toggle */}
+          <div onClick={toggleTheme} className="cursor-pointer hidden md:flex transition-transform duration-300 sm:hover:scale-110">
             {theme === "light" ? (
               <Sun className="text-yellow-500 w-7 h-7 transition-transform duration-500 hover:rotate-90" />
             ) : (
@@ -183,6 +172,21 @@ export default function Navbar() {
             )}
           </div>
 
+
+      {userToken && (
+        <div className="hidden md:flex items-center justify-around w-[250px] me-5">
+          <Link to="/cart" className="relative pl-1">
+            <i className="fa-solid fa-cart-shopping text-xl text-black dark:text-white"></i>
+            {numCartItems > 0 && (
+              <span className="absolute -top-2 -right-2 bg-green-600 text-white text-xs font-semibold w-5 h-5 flex items-center justify-center rounded-full shadow-md">{numCartItems}</span>
+            )}
+          </Link>
+          <Link to="/wishlist" className="relative -ml-10">
+            <i className="far fa-heart text-xl text-black dark:text-white"></i>
+            {userWishlistCount > 0 && (
+              <span className="absolute -top-2 -right-2 bg-[#FF3366] text-white text-xs font-semibold w-5 h-5 flex items-center justify-center rounded-full shadow-md">{userWishlistCount}</span>
+            )}
+          </Link>
           {/* Profile Desktop */}
           <div className="relative dark:text-white">
             <button onClick={() => setProfileOpen(!profileOpen)} className="flex items-center gap-2">
