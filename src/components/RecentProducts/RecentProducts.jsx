@@ -7,6 +7,7 @@ import { WishlistContext } from "../../Context/WishlistContext.jsx";
 import useRemoveFromWishlist from "../../Hooks/useRemoveFromWishlist.jsx";
 import useAddToWishlist from "../../Hooks/useAddToWishlist.jsx";
 
+
 export default function RecentProducts() {
   
   const [products, setProducts] = useState([]);

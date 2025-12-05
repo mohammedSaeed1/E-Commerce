@@ -10,10 +10,11 @@ import { Moon, Sun } from "lucide-react";
 export default function Navbar() {
   const { numCartItems, setCartProducts, setNumCartItems } = useContext(CartContext);
   const { userToken, setUserToken, userName, userEmail } = useContext(userContext);
-  const { setUserWishlist, userWishlistCount } = useContext(WishlistContext);
+  const { setUserWishlist, userWishlistCount , setUserWishlistProductsById ,setUserWishlistCount } = useContext(WishlistContext);
   const navigate = useNavigate();
   const [menuOpen, setMenuOpen] = useState(false);
   const [profileOpen, setProfileOpen] = useState(false);
+
 
   const [theme, setTheme] = useState(localStorage.getItem("theme") || "light");
 
@@ -56,6 +57,8 @@ export default function Navbar() {
     setCartProducts([]);
     setUserWishlist([]);
     setNumCartItems(0);
+    setUserWishlistCount(0);
+    setUserWishlistProductsById([]);
     navigate("/login");
   }
 
