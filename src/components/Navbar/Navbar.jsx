@@ -1,6 +1,6 @@
 import { Link, NavLink, useNavigate } from "react-router-dom";
-import lightLogo from "../../assets/images/freshcart-logo.svg";
-import darkLogo from "../../assets/images/freshcart-logo-dark.svg";
+import lightLogo from "../../assets/images/oneclickpick-logo.svg";
+import darkLogo from "../../assets/images/oneclickpick-logo-dark.svg";
 import { useContext, useState, useEffect, useRef } from "react"; 
 import { userContext } from "../../Context/UserContext";
 import { CartContext } from "../../Context/CartContext";
