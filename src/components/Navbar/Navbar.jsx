@@ -78,7 +78,7 @@ export default function Navbar() {
         
         <div className="logo">
           <Link to={`/`}>
-          {theme === "dark" ? <img src={darkLogo} alt="FreshCart" /> : <img src={lightLogo} alt="FreshCart" />}
+          {theme === "dark" ? <img src={darkLogo} alt="OneClickPick" /> : <img src={lightLogo} alt="OneClickPick" />}
           </Link>
         </div>
 
