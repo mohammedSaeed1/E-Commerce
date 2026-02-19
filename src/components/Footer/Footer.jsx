@@ -13,7 +13,7 @@ return (
       <footer className="bg-slate-100 dark:bg-[#1B1B1F] pt-10 py-3">
 
         <header className='px-5'>
-       <h2 className='text-slate-800 dark:text-white text-2xl sm:text-3xl font-semibold '>Get the Fresh Cart App</h2>
+       <h2 className='text-slate-800 dark:text-white text-2xl sm:text-3xl font-semibold '>Get the App</h2>
        <p className='text-slate-400 py-3'>We will send you a link , open it on your phone to download the app</p>
         </header>
          
