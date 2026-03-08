@@ -203,7 +203,7 @@ export default function Payment() {
                           type="radio"
                           name="paymentMethod"
                           defaultValue
-                          className="h-4 w-4 accent-green-600 border-gray-300 bg-white text-green-600  dark:border-gray-600 dark:bg-gray-700 dark:ring-offset-gray-800 "
+                          className="h-4 w-4  accent-green-600 border-gray-300 bg-white text-green-600  dark:border-gray-600 dark:bg-gray-700 dark:ring-offset-gray-800 "
                           defaultChecked
                         />
                       </div>
