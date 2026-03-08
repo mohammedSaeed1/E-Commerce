@@ -29,7 +29,7 @@ return (
      </div>
 
      <div className="download flex items-center gap-3">
-      <h3 className='font-medium dark:text-white'>Get Deliveries with OneClickPick app</h3>
+      <h3 className='font-medium text-green-600'>Get Deliveries with OneClickPick app</h3>
        <img src={googleplayLogo} alt="Google Play download" className='w-24 cursor-pointer' />
        <img src={appstoreLogo} alt=" APP Store download" className='w-24 cursor-pointer' />
      </div>
