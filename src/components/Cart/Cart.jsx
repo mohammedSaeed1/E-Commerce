@@ -211,7 +211,7 @@ export default function Cart() {
                             Total Cart Price: {cartProducts?.totalCartPrice} EGP
                           </span>
                           <Link to={`/payment`}>
-                            <button className=" w-full md:w-3/4 mt-3 duration-500 hover:bg-green-600  text-white bg-slate-300  px-6 py-2 rounded-lg dark:bg-green-600">
+                            <button className=" w-full md:w-3/4 mt-3 duration-500 hover:bg-green-600  text-white bg-slate-300  px-6 py-12 rounded-lg dark:bg-green-600">
                               Proceed to Checkout
                               <i className="fa-solid fa-credit-card ml-3"></i>
                             </button>
