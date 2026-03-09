@@ -55,16 +55,23 @@ export default function Cart() {
                 Shopping Cart
               </h2>
             </div>
-            {cartProducts?.totalCartPrice > 0 ?(
+            {cartProducts?.totalCartPrice > 0 ? (
               <>
-                <div className="text-center mt-5">
-                  <i
-                    onClick={() => removeCart()}
-                    className="fa-solid fa-trash ps-2 cursor-pointer text-xl hover:text-red-600 dark:text-white"
-                  ></i>
-                </div>
+                
                 <div className="mt-6 sm:mt-8 md:gap-6 lg:flex lg:items-start xl:gap-8">
                   <div className="mx-auto w-full flex-none lg:max-w-2xl xl:max-w-4xl">
+                    <div className="text-end ms-2 text-xl py-3 ">
+                  <button
+                    onClick={() => removeCart()}
+                    type="button"
+                    className="text-white bg-gradient-to-r from-red-400 via-red-500 to-red-600 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-red-300 dark:focus:ring-red-800 font-medium rounded-lg text-sm px-4 py-2.5 text-center leading-5"
+                  > Clear Cart Items
+                  <i
+                    className="fa-solid fa-trash   ps-2 cursor-pointer text-xl hover:text-white dark:text-white"
+                  ></i>
+                    
+                  </button>
+                </div>
                     <div className="space-y-6">
                       {cartProducts?.products.map((product) => (
                         <div
@@ -206,12 +213,12 @@ export default function Cart() {
                       ))}
 
                       {cartProducts?.totalCartPrice > 1 ? (
-                        <div className="text-center ">
+                        <div className="text-center py-3">
                           <span className="text-xl font-bold text-slate-800 w-1/4  dark:text-white ">
                             Total Cart Price: {cartProducts?.totalCartPrice} EGP
                           </span>
                           <Link to={`/payment`}>
-                            <button className=" w-full md:w-3/4 mt-3 duration-500 hover:bg-green-600  text-white bg-slate-300  px-6 py-12 rounded-lg dark:bg-green-600">
+                            <button className=" w-full md:w-3/4 mt-3 duration-500 hover:bg-green-600  text-white bg-slate-300  px-6 py-2 rounded-lg dark:bg-green-600">
                               Proceed to Checkout
                               <i className="fa-solid fa-credit-card ml-3"></i>
                             </button>
@@ -227,7 +234,6 @@ export default function Cart() {
             ) : (
               <section className="text-center">
                 <CartEmpty />
-                
               </section>
             )}
           </div>

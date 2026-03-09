@@ -68,6 +68,7 @@ export default function Navbar() {
       ref={navRef}
       className="fixed top-0 left-0 right-0 z-50 bg-slate-100 dark:bg-[#1B1B1F] py-3.5 px-4 lg:px-6"
     >
+      <div className="max-w-screen">
       {/* ── Single row on lg+, stacked on smaller ── */}
       <div className="flex items-center justify-between lg:justify-evenly gap-4">
 
@@ -249,6 +250,7 @@ export default function Navbar() {
           </ul>
         </div>
       )}
+      </div>
     </nav>
   );
 }
