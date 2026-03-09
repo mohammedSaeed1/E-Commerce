@@ -4,7 +4,7 @@ export default function CartEmpty() {
   return (
     <>
       <section className="text-center h-[70vh] pt-2">
-        <h3 className="md:text-3xl text-2xl  font-bold text-green-600 py-28">
+        <h3 className="md:text-3xl text-2xl  font-bold text-green-600 py-32">
           Cart is Empty !
         </h3>
         <Link to={`/products`}>
