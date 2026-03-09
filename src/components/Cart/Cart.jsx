@@ -48,7 +48,7 @@ export default function Cart() {
       {isLoading ? (
         <Spinner />
       ) : (
-        <section className="bg-white pt-28 antialiased dark:bg-[#1B1B1F]">
+        <section className="bg-white pt-16 antialiased dark:bg-[#1B1B1F]">
           <div className="mx-auto max-w-screen-xl px-4 ">
             <div className="text-center">
               <h2 className="md:text-3xl text-2xl font-serif  font-semibold text-green-600 dark:text-white border-b-4 border-green-600 inline ">
