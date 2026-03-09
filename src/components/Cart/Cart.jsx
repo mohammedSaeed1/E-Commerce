@@ -51,7 +51,7 @@ export default function Cart() {
         <section className="bg-white py-8 antialiased dark:bg-[#1B1B1F]">
           <div className="mx-auto max-w-screen-xl px-4 ">
             <div className="text-center">
-              <h2 className="md:text-3xl text-2xl font-serif  font-semibold text-green-600 dark:text-white border-b-4 border-green-600 inline ">
+              <h2 className="md:text-3xl text-2xl font-serif pt-12  font-semibold text-green-600 dark:text-white border-b-4 border-green-600 inline ">
                 Shopping Cart
               </h2>
             </div>
