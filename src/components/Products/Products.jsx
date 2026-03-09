@@ -55,7 +55,7 @@ return (
         <Spinner />
       ) : (
         <section>
-          <div className="mx-auto text-center">
+          <div className="mx-auto text-center ">
             <input 
               onKeyUp={(e) => searchProduct(e.target.value)}
               type="text"

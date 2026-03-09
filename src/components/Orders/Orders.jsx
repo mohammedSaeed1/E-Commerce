@@ -4,10 +4,8 @@ import { jwtDecode } from "jwt-decode";
 import Spinner from "./../Spinner/Spinner";
 import { Helmet } from "react-helmet-async";
 
-
 export default function Orders() {
-
-const userToken = localStorage.getItem(`userToken`);
+  const userToken = localStorage.getItem(`userToken`);
   const { id } = jwtDecode(userToken);
   const [orders, setOrders] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
@@ -30,13 +28,17 @@ const userToken = localStorage.getItem(`userToken`);
 
   return (
     <>
-       <Helmet>
-   <title>Orders</title>
-     </Helmet>
-      {isLoading ?  <Spinner /> : <section className="bg-white py-8 antialiased dark:bg-[#1B1B1F] md:py-16">
+      <Helmet>
+        <title>Orders</title>
+      </Helmet>
+      {isLoading ? (
+        <Spinner />
+      ) : (
+        <section className="bg-white antialiased  dark:bg-[#1B1B1F] h-[70vh] pt-36">
           <div className="mx-auto max-w-screen-xl px-4 2xl:px-0">
             <div className="mx-auto max-w-5xl">
-              {orders.length > 0 ?  <>
+              {orders.length > 0 ? (
+                <>
                   <div className="gap-4 sm:flex sm:items-center text-center sm:justify-between">
                     <h2 className="text-4xl font-serif font-semibold text-green-600 dark:text-white border-b-4 border-green-600 inline">
                       My orders
@@ -135,16 +137,18 @@ const userToken = localStorage.getItem(`userToken`);
                       ))}
                     </div>
                   </div>
-                </> :   <section className="text-center">
-                  <h3 className="md:text-3xl text-2xl py-28 font-bold text-green-600">
+                </>
+              ) : (
+                <section className="text-center ">
+                  <h3 className="md:text-3xl text-2xl font-bold  text-green-600">
                     No Orders yet
                   </h3>
-                </section> 
-              }
+                </section>
+              )}
             </div>
           </div>
         </section>
-      }
+      )}
     </>
   );
 }

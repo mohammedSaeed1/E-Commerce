@@ -34,7 +34,7 @@ return (
      </Helmet>
         {isLoading ?
           <Spinner /> : <>
-          <section className="text-center py-8">
+          <section className="text-center py-8 h-[70vh]  pt-20">
           <h2 className="md:text-3xl text-2xl font-serif font-semibold text-green-600 dark:text-white border-b-4 border-green-600 inline">WishList Items</h2>
         {userWishlist?.length > 0 ? <div className="row">
             {userWishlist?.map((product) => (
