@@ -42,16 +42,16 @@ export default function Cart() {
 
   return (
     <>
-       <Helmet>
-   <title>Cart</title>
-     </Helmet>
+      <Helmet>
+        <title>Cart</title>
+      </Helmet>
       {isLoading ? (
         <Spinner />
       ) : (
         <section className="bg-white py-8 antialiased dark:bg-[#1B1B1F]">
           <div className="mx-auto max-w-screen-xl px-4 ">
             <div className="text-center">
-              <h2 className="md:text-3xl text-2xl font-serif pt-12  font-semibold text-green-600 dark:text-white border-b-4 border-green-600 inline ">
+              <h2 className="md:text-3xl text-2xl font-serif pt- font-semibold text-green-600 dark:text-white border-b-4 border-green-600 inline ">
                 Shopping Cart
               </h2>
             </div>
@@ -88,7 +88,7 @@ export default function Cart() {
                                   onClick={() =>
                                     updateCart(
                                       product.product.id,
-                                      product.count - 1
+                                      product.count - 1,
                                     )
                                   }
                                   id="decrement-button"
@@ -123,7 +123,7 @@ export default function Cart() {
                                   onClick={() =>
                                     updateCart(
                                       product.product.id,
-                                      product.count + 1
+                                      product.count + 1,
                                     )
                                   }
                                   type="button"

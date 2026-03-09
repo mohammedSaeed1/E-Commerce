@@ -2,11 +2,10 @@ import { useContext, useEffect, useState } from "react";
 import { WishlistContext } from "../../Context/WishlistContext";
 import Spinner from "../Spinner/Spinner";
 import useAddProducts from "../../Hooks/useAddProducts";
-import { Link } from "react-router-dom";
 import NoProductsFound from "../NoProductsFound/NoProductsFound";
 import useRemoveFromWishlist from "../../Hooks/useRemoveFromWishlist";
 import { Helmet } from "react-helmet-async";
-
+import { Link } from "react-router-dom";
 
 export default function Wishlist(){
     
@@ -34,7 +33,7 @@ return (
      </Helmet>
         {isLoading ?
           <Spinner /> : <>
-          <section className="text-center py-8 h-[70vh]  pt-20">
+          <section className="text-center py-8   pt-20">
           <h2 className="md:text-3xl text-2xl font-serif font-semibold text-green-600 dark:text-white border-b-4 border-green-600 inline">WishList Items</h2>
         {userWishlist?.length > 0 ? <div className="row">
             {userWishlist?.map((product) => (

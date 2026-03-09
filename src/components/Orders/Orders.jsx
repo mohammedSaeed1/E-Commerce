@@ -34,7 +34,7 @@ export default function Orders() {
       {isLoading ? (
         <Spinner />
       ) : (
-        <section className="bg-white antialiased  dark:bg-[#1B1B1F] h-[70vh] pt-36">
+        <section className="bg-white antialiased  dark:bg-[#1B1B1F]  pt-36">
           <div className="mx-auto max-w-screen-xl px-4 2xl:px-0">
             <div className="mx-auto max-w-5xl">
               {orders.length > 0 ? (
@@ -139,7 +139,7 @@ export default function Orders() {
                   </div>
                 </>
               ) : (
-                <section className="text-center ">
+                <section className="text-center h-[70vh]">
                   <h3 className="md:text-3xl text-2xl font-bold  text-green-600">
                     No Orders yet
                   </h3>
