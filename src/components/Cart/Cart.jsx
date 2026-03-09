@@ -55,7 +55,7 @@ export default function Cart() {
                 Shopping Cart
               </h2>
             </div>
-            {cartProducts?.totalCartPrice > 0 (
+            {cartProducts?.totalCartPrice > 0 ?(
               <>
                 <div className="text-center mt-5">
                   <i
@@ -224,7 +224,12 @@ export default function Cart() {
                   </div>
                 </div>
               </>
-            ) }
+            ) : (
+              <section className="text-center">
+                <CartEmpty />
+                
+              </section>
+            )}
           </div>
         </section>
       )}
